@@ -7,21 +7,72 @@
     error: '复制错误',
     noSupport: '浏览器不支持'
   }
-} </script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#maven是什么"><span class="toc-number">1.</span> <span class="toc-text">maven是什么</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#为什么要用maven"><span class="toc-number">2.</span> <span class="toc-text">为什么要用maven</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">牛皮糖</div><div class="author-info__description text-center">blog</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">2</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">1</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">1</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">牛皮糖的窝</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">maven学习笔记</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-07-18</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><blockquote>
+} </script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#maven是什么"><span class="toc-number">1.</span> <span class="toc-text">maven是什么</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#为什么要用maven"><span class="toc-number">2.</span> <span class="toc-text">为什么要用maven</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#如何使用maven"><span class="toc-number">3.</span> <span class="toc-text">如何使用maven</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#约定的目录结构"><span class="toc-number">3.1.</span> <span class="toc-text">约定的目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pom文件"><span class="toc-number">3.2.</span> <span class="toc-text">pom文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#坐标"><span class="toc-number">3.3.</span> <span class="toc-text">坐标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#仓库"><span class="toc-number">3.4.</span> <span class="toc-text">仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#依赖"><span class="toc-number">3.5.</span> <span class="toc-text">依赖</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">牛皮糖</div><div class="author-info__description text-center">blog</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">2</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">1</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">1</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">牛皮糖的窝</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">maven学习笔记</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-07-18</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><blockquote>
 <p>由于公司框架的升级调整，工作中需要使用到maven，所以记录下学习要点，方便以后查阅。</p>
 </blockquote>
-<h1 id="maven是什么"><a href="#maven是什么" class="headerlink" title="maven是什么"></a>maven是什么</h1><p>​        maven是一款服务于java平台的自动化构建工具。简单来说，就是把项目自动进行编译打包部署的过程。</p>
-<p>​        而具体的过程，可以在idea中的侧边栏中看出，整个构建过程分为以下几个环节：</p>
-<p><img src="/2019-07-18-maven学习笔记/maven-01.png" alt></p>
+<a id="more"></a>
+
+<h1 id="maven是什么"><a href="#maven是什么" class="headerlink" title="maven是什么"></a>maven是什么</h1><blockquote>
+<p>maven是”妹文”，不是”妈文”。</p>
+</blockquote>
+<p>​    maven是一款服务于java平台的自动化构建工具。简单来说，就是把项目自动进行编译打包部署的过程。</p>
+<p>​        而整个构建过程主要分为以下几个环节：</p>
 <p>​        1.clean：删除老的class文件</p>
 <p>​        2.compile：java文件–&gt;class文件</p>
 <p>​        3.test：自动调用junit进行测试</p>
 <p>​        4.package：打成war或jar包</p>
 <p>​        5.install：将打的包复制到仓库的指定位置</p>
-<h1 id="为什么要用maven"><a href="#为什么要用maven" class="headerlink" title="为什么要用maven"></a>为什么要用maven</h1><p>程序员的痛点：</p>
-<pre><code>- 之前做项目时，需要去其他项目中复制一堆jar包到lib文件夹下。
-- 需要找个额外的jar包时，csdn类似的网站。抱歉，我没有积分。。
-- 当引入不熟悉的jar包时，运行程序有时会报，can not found class。。恩，还有其他关联jar包没有引入，继续找。。</code></pre></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">牛皮糖</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://loveai.top/2019-07-18-maven学习笔记.html">http://loveai.top/2019-07-18-maven学习笔记.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://loveai.top">牛皮糖的窝</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/maven/">maven</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2019-07-01-my-first-blog.html"><span>你好，七月</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2019 By 牛皮糖</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+<h1 id="为什么要用maven"><a href="#为什么要用maven" class="headerlink" title="为什么要用maven"></a>为什么要用maven</h1><blockquote>
+<p>因为不与时俱进就要被淘汰了啊！</p>
+</blockquote>
+<p>程序员的痛点：</p>
+<p>​        1.新建项目时，需要去其他项目中复制一堆jar包到lib文件夹下。</p>
+<p>​        2.需要找个额外的jar包时，csdn类似的网站。抱歉，我没有积分。。</p>
+<p>​        3.当引入不熟悉的jar包时，运行程序有时会报，can not found class。。恩，还有其他关联jar包没有引入，继续找。。</p>
+<p>​        4.当公司的公共组件包有人更新时，需要重新打包发给需要的人，十分的不方便。</p>
+<p>​        基于以上总总。。恩，maven都能很好的解决。</p>
+<h1 id="如何使用maven"><a href="#如何使用maven" class="headerlink" title="如何使用maven"></a>如何使用maven</h1><blockquote>
+<p>解决了程序员的痛点，应该就能灵活的使用maven了。</p>
+</blockquote>
+<h2 id="约定的目录结构"><a href="#约定的目录结构" class="headerlink" title="约定的目录结构"></a>约定的目录结构</h2><blockquote>
+<p>我的地盘我做主！只有大家约定了相同的标准，那么在使用过程中就可以仅仅通过配置来引入自己所需的资源。</p>
+</blockquote>
+<p>maven有一套自己的标准目录结构，这样maven才能自动完成构建过程。</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">maven工程</span><br><span class="line">|---src                   源码</span><br><span class="line">|---|---main              存放主程序</span><br><span class="line">|---|---|---java		  存放java源文件</span><br><span class="line">|---|---|---resources	  存放其他框架配置文件以及相关资源</span><br><span class="line">|---|---test			  存放测试程序</span><br><span class="line">|---|---|---java		  存放java测试源文件</span><br><span class="line">|---|---|---resources     存放测试的配置文件以及相关资源</span><br><span class="line">|---pom.xml       		  maven工程的核心配置文件</span><br></pre></td></tr></table></figure>
+
+<h2 id="pom文件"><a href="#pom文件" class="headerlink" title="pom文件"></a>pom文件</h2><blockquote>
+<p>我是pom能射箭。。</p>
+</blockquote>
+<p>这个文件好比web.xml对于web项目。这是maven工程的核心配置文件，与构建相关的配置都在这个文件中。</p>
+<h2 id="坐标"><a href="#坐标" class="headerlink" title="坐标"></a>坐标</h2><blockquote>
+<p>这个就厉害了，想想数学中的x,y可以定位到唯一位置的一个点，x,y,z能定位到空间中的一个点。–论数学基石的重要性。</p>
+</blockquote>
+<p>pom文件中通过”gav”三个向量来在maven仓库中定位一个maven工程。</p>
+<ul>
+<li><p>groupid:公司或组织域名倒序+项目名</p>
+</li>
+<li><p>artifactid:模块名</p>
+</li>
+<li><p>version:版本号</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">举个栗子：</span><br><span class="line">&lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;</span><br><span class="line">&lt;artifactId&gt;junit-jupiter-params&lt;/artifactId&gt;</span><br><span class="line">&lt;version&gt;5.5.1&lt;/version&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h2><p>仓库的分类：</p>
+<p>1.本地仓库：即自己电脑中的本地仓库</p>
+<p>2.远程仓库：</p>
+<ul>
+<li><p>私服：搭建在局域网中。只为局域网内用户提供服务</p>
+</li>
+<li><p>中央仓库：为全球用户提供服务</p>
+</li>
+<li><p>中央镜像仓库：为了分担中央仓库的流量而搭建的不同地区的镜像网站</p>
+</li>
+</ul>
+<blockquote>
+<p>介绍了前面3个概念以后，那么接下来就开始解决痛点了，所有的jar包都放在本地仓库中，如果没有，则通过pom文件的gav配置去中央仓库下载需要的jar包。这样再也不用自己去找jar包下载了，也不需要新建一个项目就要复制一堆jar包导入工程的做法了。在最后的打包过程中，再将所需的jar包打入即可。</p>
+</blockquote>
+<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">牛皮糖</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://loveai.top/2019-07-18-maven学习笔记.html">http://loveai.top/2019-07-18-maven学习笔记.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://loveai.top">牛皮糖的窝</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/maven/">maven</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2019-07-01-my-first-blog.html"><span>你好，七月</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2019 By 牛皮糖</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
   $('#nav').addClass('is-mobile')
   $('footer').addClass('is-mobile')
 }</script></body></html>
